@@ -2,4 +2,4 @@
 set -e
 make
 DOMAIN=l2l.kemitchell.com
-scp ./index.html ./client.js "$DOMAIN:/var/www/$DOMAIN"
+scp ./index.html "$DOMAIN:/var/www/$DOMAIN"
