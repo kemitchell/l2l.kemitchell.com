@@ -4,4 +4,7 @@ function expandDetails () {
 
 window.addEventListener('beforeprint', expandDetails)
 
-if (window.matchMedia && window.matchMedia('print')) expandDetails()
+if (window.matchMedia) {
+  const query = window.matchMedia('print')
+  query.addEventListener('change', expandDetails)
+}
